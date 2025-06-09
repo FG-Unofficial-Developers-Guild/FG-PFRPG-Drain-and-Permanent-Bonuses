@@ -9,11 +9,19 @@ local function addPerms(nodeAbil)
 
 		if nPerm > 0 then
 			if (sType == 'circumstance') or (sType == 'dodge') or (sType == 'untyped') then
-				if aBonuses[sType] then aBonuses[sType] = (aBonuses[sType] + nPerm) end
-				if not aBonuses[sType] then aBonuses[sType] = nPerm end
+				if aBonuses[sType] then
+					aBonuses[sType] = (aBonuses[sType] + nPerm)
+				end
+				if not aBonuses[sType] then
+					aBonuses[sType] = nPerm
+				end
 			else
-				if aBonuses[sType] then aBonuses[sType] = math.max(aBonuses[sType], nPerm) end
-				if not aBonuses[sType] then aBonuses[sType] = nPerm end
+				if aBonuses[sType] then
+					aBonuses[sType] = math.max(aBonuses[sType], nPerm)
+				end
+				if not aBonuses[sType] then
+					aBonuses[sType] = nPerm
+				end
 			end
 		else
 			table.insert(aBonuses, nPerm)
@@ -29,7 +37,9 @@ local function addPerms(nodeAbil)
 end
 
 local function onPermUpdate()
-	if DB.getName(getDatabaseNode(), '..') == 'abilities' then addPerms(getDatabaseNode()) end
+	if DB.getName(getDatabaseNode(), '..') == 'abilities' then
+		addPerms(getDatabaseNode())
+	end
 end
 
 function onInit()

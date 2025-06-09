@@ -17,8 +17,12 @@ local function handleRacialAbilities_new(nodeChar, sText)
 					aIncreases[aWords[i - 1]] = nMod
 				else
 					local j = i + 1
-					if StringManager.isWord(aWords[j], 'bonus') then j = j + 1 end
-					if StringManager.isPhrase(aWords, j, { 'to', 'one', 'ability', 'score' }) then bChoice = true end
+					if StringManager.isWord(aWords[j], 'bonus') then
+						j = j + 1
+					end
+					if StringManager.isPhrase(aWords, j, { 'to', 'one', 'ability', 'score' }) then
+						bChoice = true
+					end
 				end
 			end
 		end
@@ -54,4 +58,6 @@ local function handleRacialAbilities_new(nodeChar, sText)
 	return bApplied
 end
 
-function onInit() CharManager.handleRacialAbilities = handleRacialAbilities_new end
+function onInit()
+	CharManager.handleRacialAbilities = handleRacialAbilities_new
+end
