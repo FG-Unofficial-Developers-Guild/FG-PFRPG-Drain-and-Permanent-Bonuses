@@ -7,7 +7,7 @@
 		<loadorder>29</loadorder>
 		<name>Feature: Drain and Permanent Bonuses</name>
 		<version>1.5</version>
-		<author>bmos (Wil Thieme)</author>
+		<author>bmos (Ramona T)</author>
 		<description>This extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e</description>
 		<ruleset>
 			<name>PFRPG</name>
